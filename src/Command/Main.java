@@ -10,7 +10,7 @@ interface Command {
     void execute();
 }
 
-//Concrete commands
+//Concrete commands that implement command interface
 class CopyCommand implements Command {
     public void execute() {
         System.out.println("Копирование текста");
@@ -35,7 +35,7 @@ class UndoCommand implements Command {
     }
 }
 
-//Invoker
+//Invoker invokes concrete commands
 class Button {
     private Command command;
 
@@ -49,6 +49,7 @@ class Button {
         }
     }
 }
+
 
 public class Main {
     public static void main(String[] args) {
