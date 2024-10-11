@@ -1,9 +1,16 @@
 package Command;
 
+//new viperr members:
+//Ruslan Matveyevv
+//Yerasyl Zekebayevv
+
+
+//Command
 interface Command {
     void execute();
 }
 
+//Concrete commands
 class CopyCommand implements Command {
     public void execute() {
         System.out.println("Копирование текста");
@@ -28,6 +35,7 @@ class UndoCommand implements Command {
     }
 }
 
+//Invoker
 class Button {
     private Command command;
 
