@@ -1,6 +1,9 @@
 package Observer;
 
 public class Main {
+    //viperr crew
+    //RRuslan Matveyev
+    //Yerrassyl Zekebayev
     public static void main(String[] args) {
         Publisher rassylka = new Publisher();
         Subscriber s = new Subscriber();
