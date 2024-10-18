@@ -1,18 +1,31 @@
 package Observer;
 
+import java.util.Scanner;
+
 public class Main {
     //viperr crew
     //RRuslan Matveyev
     //Yerrassyl Zekebayev
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Publisher rassylka = new Publisher();
-        Subscriber s = new Subscriber();
-        Subscriber я = new Subscriber();
 
-        rassylka.subscribe(s);
-        rassylka.subscribe(я);
-        rassylka.setNews("watson joins GG");
-        rassylka.unSubscribe(я);
-        rassylka.setNews("Dora released new album");
+        Subscriber z = new Subscriber();
+        rassylka.subscribe(z);
+        Subscriber s = new Subscriber();
+        System.out.println("do you want to subscribe? 1 = yes, 2 = no ");
+        int usl = sc.nextInt();
+        sc.nextLine();
+
+        if(usl == 1) {rassylka.subscribe(s);};
+        System.out.println("Set news:");
+        String news = sc.nextLine();
+        rassylka.setNews(news);
+
+
+        rassylka.unSubscribe(z);
+        System.out.println("Set news:");
+        String newa = sc.nextLine();
+        rassylka.setNews(newa);
     }
 }

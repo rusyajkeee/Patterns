@@ -12,9 +12,11 @@ public class Publisher {
 
     public void subscribe(Subscriber s) {
         subs.add(s);
+        System.out.println("Subs now: " + this.subs.size());
     };
     public void unSubscribe(Subscriber s) {
         subs.remove(s);
+        System.out.println("Subs now: " + this.subs.size());
     };
     public void myNotify() {
         for (int i = 0; i < subs.size(); i++) this.subs.get(i).update(news);
